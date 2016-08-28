@@ -126,7 +126,7 @@ span {
 /* TODO: make header image responsive */
 #header {
     background-color: #484848;
-    background: url("../images/pexels-photo-28470-1600_large_2x.jpg") #4a4a4a no-repeat center center fixed;
+    background: url("../images/pexels-photo-28470-1600_large_2x.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
