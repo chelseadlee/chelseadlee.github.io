@@ -22,10 +22,9 @@ h6 {
 }
 
 h1 {
-    font: 300 56px/1.2'Lobster', cursive;
+    font: 300 5em/1.2'Lobster', cursive;
     color: #f2b579;
     line-height: 50px;
-    display: inline;
 }
 
 h2 {
@@ -85,8 +84,7 @@ span {
 
 #main {
     max-width: 1450px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .education-entry,
@@ -136,33 +134,38 @@ span {
 }
 
 #titleBox {
-    margin: 0 auto 15% auto;
+    margin: 0 auto 5% auto;
     max-width: 100%;
     text-align: right;
 }
 
 #name {
-    text-align: right;
+    text-align: center;
     white-space: normal;
 }
 
 #role {
-    text-align: right;
-    padding-right: 0;
+    text-align: center;
     color: #f3f3f3;
+    padding-top: 5%;
     white-space: nowrap;
 }
 
 .biopic {
     float: left;
     margin: 70px 0;
-    padding: 10px;
-    width: 250px;
-    height: 250px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     display: none;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #330000;
     max-width: 100%;
+}
+
+#headerMsg {
+    margin: 0 auto;
 }
 
 .welcome-message {
@@ -174,12 +177,6 @@ span {
 }
 
 #skillsBox {
-    padding: 13px 8px;
-    border: 4px double #330000;
-    white-space: nowrap;
-}
-
-#skills-h3 {
     display: none;
 }
 
@@ -217,6 +214,15 @@ span {
 
 .center-content {
     padding: 2.5% 5%;
+}
+
+.flex-item.contact-info {
+    display: flex;
+    align-self: baseline;
+}
+
+.contact-item {
+    align-self: baseline;
 }
 
 .orange {
@@ -391,18 +397,21 @@ span {
     }
 }
 
+
 @media only screen and (min-width: 756px) {
     #header {
-        height: 500px;
+        height: 380px;
     }
 
     .biopic {
         display: block;
-        margin: 15% 5% 0 5%;
+        margin: 15% auto;
+        height: 100%;
+        width: 100%;
     }
 
     #skillsBox {
-        margin: 10% auto;
+        margin: 0 auto;
     }
 
     #skills-h3 {
@@ -410,6 +419,30 @@ span {
         color: #330000;
         text-align: right;
         padding: 7px 4px;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    #header {
+        height: 440px;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    #header {
+        height: 500px;
+    }
+}
+
+
+@media only screen and (min-width: 540px) {
+    #skillsBox {
+        display: block;
+        padding: 13px 8px;
+        border: 4px double #330000;
+        white-space: nowrap;
+    }
+    #name, #role {
+        text-align: left;
     }
 }
 
