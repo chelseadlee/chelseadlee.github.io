@@ -9,7 +9,7 @@ var bio = {
     "name": "Chelsea Lee",
     "role": "Web Developer",
     "contacts": {
-        "mobile": "1(206)696-3760",
+        "mobile": "1.206.696.3760",
         "email": "chelsea.d.lee12@gmail.com",
         "github": "http://www.github.com/chelseadlee",
         "location": "Seattle"
@@ -18,15 +18,15 @@ var bio = {
     "skills": [
         "HTML", "CSS", "JavaScript", "WordPress"
     ],
-    "biopic": "images_src/fry.jpg",
+    "biopic": "images/portfolioimg-450_tiny.jpg",
     display: function() {
         // format and replace bio object data
         var data = '%data%';
         var headerName = HTMLheaderName.replace(data, bio.name);
         var role = HTMLheaderRole.replace(data, bio.role);
         var formattedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
-        var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
-        var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
+        var formattedEmail = HTMLemail.replace(data, bio.contacts.email).replace("#", bio.contacts.email);
+        var formattedGithub = HTMLgithub.replace(data, bio.contacts.github).replace("#", bio.contacts.github);
         var formattedLocation = HTMLlocation.replace(data, bio.contacts.location);
         var formattedMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
         var formattedPic = HTMLbioPic.replace(data, bio.biopic);
@@ -51,6 +51,13 @@ bio.display();
 
 var work = {
     "jobs": [{
+        "employer": "Self-Employed",
+        "title": "Web Developer",
+        "location": "Seattle",
+        "dates": "2015 - Present",
+        "description": "Making websites",
+        "url": "http://chelsealee.net"
+    }, {
         "employer": "Boyden global executive search",
         "title": "Research Associate",
         "location": "Seattle",
@@ -64,13 +71,6 @@ var work = {
         "dates": "2015 - Present",
         "description": "Drinking coffee professionally",
         "url": "http://www.broadcastcoffee.com"
-    }, {
-        "employer": "Self-Employed",
-        "title": "Web Developer",
-        "location": "Seattle",
-        "dates": "2015 - Present",
-        "description": "Making websites",
-        "url": "http://chelsealee.net"
     }, {
         "employer": "ROOTS Young Adult Shelter (AmeriCorps)",
         "title": "Resource Coordinator",
@@ -115,7 +115,7 @@ var projects = {
         "dates": "2015 - 2016",
         "description": "Built website for local nonprofit",
         "url": "http://www.rootsinfo.org",
-        "images": ["images_src/197x148.gif"]
+        "images": ["images/roots-website-450_tiny.png"]
     }],
     display: function() {
         projects.projects.forEach(function(project) {
